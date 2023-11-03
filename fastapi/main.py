@@ -35,7 +35,7 @@ def recomendacion_juego(Id: int):
         seen_ids = set()
         for i in sim_scores:
             juego_id = i[0]
-            if juego_id not in seen_ids and i[1] < 0.4:  # Establece un umbral de similitud
+            if juego_id not in seen_ids and i[1] < 0.3:  # Establece un umbral de similitud
                 recommended_juegos.append(df_juegos.iloc[juego_id]['Nombre_del_contenido'])
                 seen_ids.add(juego_id)
             if len(recommended_juegos) >= 5:
